@@ -52,7 +52,7 @@ export default function App() {
 						<div className='question-count'>
 							<span>Question 1</span>/{questions.length}
 						</div>
-						<div className='question-text'>This is where the question text should go</div>
+						<div className='question-text'>{questions[0]}</div>
 					</div>
 					<div className='answer-section'>
 						<button>Answer 1</button>
