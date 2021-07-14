@@ -1,2 +1,5 @@
-# flag-quiz-app
-A quiz app built in React to test your flag knowledge
+Starter code for quiz-app beginner react project
+
+- clone repo
+- npm install
+- npm start
