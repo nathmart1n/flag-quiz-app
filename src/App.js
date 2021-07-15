@@ -30,19 +30,6 @@ export default function App() {
 	//Handle reaching end and display score screen
 	const [showScore, setShowScore] = useState(false);
 	//Questions we use
-	/*
-		{
-			questionImagePath: 'images/am.png',
-			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
-			],
-		},
-
-	*/
-	
 	const questions = [];
 	const countryCodes = Object.keys(countries);
 
@@ -61,15 +48,24 @@ export default function App() {
 	}
 
 	shuffleArray(questions);
-
 	const shuffledSlicedQuestions = questions.slice(0, 10);
+
+	function refreshPage() {
+		window.location.reload(false);
+	}
 
 	return (
 		<div className='app'>
 			{/* HINT: replace "false" with logic to display the 
       score when the user has answered all the questions */}
 			{showScore ? (
-				<div className='score-section'>You scored {score} out of {shuffledSlicedQuestions.length}</div>
+				<>
+					<div className='score-section'>
+						<p>You scored {score} out of {shuffledSlicedQuestions.length}</p>
+						<button className='vertical-center'onClick={refreshPage}>Click to play again!</button>
+					</div>
+					
+				</>
 			) : (
 				<>
 					<div className='question-section'>

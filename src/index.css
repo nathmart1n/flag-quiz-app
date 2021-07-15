@@ -22,8 +22,7 @@ body {
 .app {
   background-color: #252d4a;
   width: 600px;
-  min-height: 300px;
-  max-height: 300px;
+  min-height: 142px;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
@@ -36,6 +35,7 @@ body {
   display: flex;
   font-size: 24px;
   align-items: center;
+  flex-direction: column;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
@@ -107,4 +107,9 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+img {
+  vertical-align: middle;
+  padding-bottom: 15px;
 }
