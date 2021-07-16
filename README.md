@@ -1,4 +1,4 @@
-Starter code for quiz-app beginner react project
+Simple flag quiz applet in React
 
 - clone repo
 - npm install
